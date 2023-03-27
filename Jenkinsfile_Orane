@@ -30,6 +30,6 @@ Landmark Tecxhnologies''', subject: 'Build status', to: 'developers'
 
   }
   stage('prod-Deploy'){
-    deploy adapters: [tomcat9(credentialsId: 'TomcatCredentials', path: '', url: 'http://13.40.75.10:8080/')], contextPath: null, war: 'target/*war'
+    deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://13.41.203.124:8080/')], contextPath: '/home/ec2-user', war: 'target/*.war'
   }
 }
